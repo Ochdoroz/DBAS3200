@@ -1,16 +1,20 @@
-def main():
-    foods = [
-        {"name": "pizza", "calories": 800, "ingredients": ["cheese", "tomato", "dough"]},
-        {"name": "salad", "calories": 150, "ingredients": ["lettuce", "tomato", "cucumber"]},
-        {"name": "burger", "calories": 600, "ingredients": ["bun", "beef", "cheese"]},
-        {"name": "spaghetti", "calories": 400, "ingredients": ["meatballs", "sauce", "noodles"]},
-        {"name": "chicken", "calories": 300, "ingredients": ["chicken", "sauce", "rice"]},
-        {"name": "tacos", "calories": 500, "ingredients": ["beef", "lettuce", "tomato"]},
-        {"name": "pasta", "calories": 600, "ingredients": ["sauce", "noodles", "cheese"]},
-        {"name": "rice", "calories": 200, "ingredients": ["rice", "sauce", "chicken"]},
+import json
 
-    ]
+def load_foods():
+    try:
+        with open("foods.json", "r") as file:
+            return json.load(file)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+def save_foods(foods):
+    with open("foods.json", "w") as file:
+        json.dump(foods, file, indent=4)
+
+def main():
+    foods = load_foods()
     while True:
+
         print(
             " Please enter a number to determine your choice \n"
             "1 to view all dish names \n"
@@ -62,6 +66,7 @@ def main():
             ingredient = input().lower()
             search_dish_by_ingredient(ingredient, foods)
         elif ans == "8":
+            save_foods(foods)
             print("Have a nice day")
             break
         else:
