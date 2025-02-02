@@ -1,0 +1,74 @@
+[
+    {
+        "name": "pizza",
+        "calories": 800,
+        "ingredients": [
+            "cheese",
+            "tomato",
+            "dough"
+        ]
+    },
+    {
+        "name": "salad",
+        "calories": 150,
+        "ingredients": [
+            "lettuce",
+            "tomato",
+            "cucumber"
+        ]
+    },
+    {
+        "name": "burger",
+        "calories": 600,
+        "ingredients": [
+            "bun",
+            "beef",
+            "cheese"
+        ]
+    },
+    {
+        "name": "spaghetti",
+        "calories": 400,
+        "ingredients": [
+            "meatballs",
+            "sauce",
+            "noodles"
+        ]
+    },
+    {
+        "name": "chicken",
+        "calories": 300,
+        "ingredients": [
+            "chicken",
+            "sauce",
+            "rice"
+        ]
+    },
+    {
+        "name": "tacos",
+        "calories": 500,
+        "ingredients": [
+            "beef",
+            "lettuce",
+            "tomato"
+        ]
+    },
+    {
+        "name": "pasta",
+        "calories": 600,
+        "ingredients": [
+            "sauce",
+            "noodles",
+            "cheese"
+        ]
+    },
+    {
+        "name": "rice",
+        "calories": 200,
+        "ingredients": [
+            "rice",
+            "sauce",
+            "chicken"
+        ]
+    }
+]
