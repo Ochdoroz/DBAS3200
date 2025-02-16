@@ -111,7 +111,8 @@ def main():
         print("2. Add a new book")
         print("3. Search books by author")
         print("4. Filter books by year")
-        print("5. Exit")
+        print("5. Remove book")
+        print("6. Exit")
         choice = input()
 
         if choice == "1":
@@ -123,6 +124,8 @@ def main():
         elif choice == "4":
             library.filter_books_by_year()
         elif choice == "5":
+            library.remove_book()
+        elif choice == "6":
             print("Exiting the library system. Goodbye!")
             library.save_books()
             break
